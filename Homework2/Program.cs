@@ -69,7 +69,6 @@ namespace Homework2Heishman
         {
             string s1 = "Missouri State University College of Business";
             int start = s1.IndexOf(" ") + 1;
-            Console.WriteLine(start);
             string secondWord = s1.Substring(start, s1.IndexOf(" ", start) - start);
             Console.WriteLine($"Second word: {secondWord}");
             Console.ReadLine(); //press any key to go back to the menu
@@ -99,7 +98,7 @@ namespace Homework2Heishman
         }
         private static void DoExe4()
         {
-            const double WITHHOLDING_RATE = 15;
+            const double WITHHOLDING_RATE = 0.15; //to decimal
             string hoursAsString, rateAsString;
             double hours, rate;
             double gross, withholding, net;
@@ -113,9 +112,9 @@ namespace Homework2Heishman
 
             hours = Convert.ToDouble(hoursAsString); //fixed spelling
             rate = Convert.ToDouble(rateAsString); //fixed spelling
-            gross = hours + rate;
+            gross = hours * rate; //fixed math
             withholding = gross * WITHHOLDING_RATE;
-            net = gross * withholding;
+            net = gross - withholding; //fixed math
 
             Console.WriteLine("You worked {0} hours at {1} per hour", hours, rate.ToString("C"));
             Console.WriteLine("Gross pay is {0}", gross.ToString("C"));
