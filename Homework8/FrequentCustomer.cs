@@ -15,6 +15,5 @@ namespace Hwk8Heishman
                 discountRate = value;
             }
         }
-
     }
 }
