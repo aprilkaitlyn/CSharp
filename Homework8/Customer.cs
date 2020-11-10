@@ -5,11 +5,6 @@ namespace Hwk8Heishman
         private int custNum;
         private double custBalance;
 
-        public Customer () //added empty constructor
-        {
-
-        }
-
         public int CustNum //made public
         {
             get
@@ -32,6 +27,5 @@ namespace Hwk8Heishman
                 custBalance = value; //changed to =
             }
         }
-
     }
 }
